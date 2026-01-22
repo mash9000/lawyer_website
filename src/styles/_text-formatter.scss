@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use './color';
+@use 'colors';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 @mixin universal-text-formatter {
@@ -19,6 +19,26 @@
       size: 14px;
     }
     text-transform: uppercase;
-    color: map.get(color.$mainColors, 'white-color-100');
+    color: map.get(colors.$mainColors, 'white-color-100');
+  } @else if ($element == 'service-heading') {
+    @include universal-text-formatter;
+    font: {
+      weight: 800;
+      size: 20px;
+    }
+    color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else if ($element == 'service-description') {
+    @include universal-text-formatter;
+    display: inline-block;
+    width: 348px;
+    font: {
+      weight: 300;
+      size: 14px;
+    }
+    line-height: 120%;
+    text-align: center;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else {
+    @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }
 }

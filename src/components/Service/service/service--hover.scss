@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../../../styles/colors';
+
+.service--hover:hover {
+  background: map.get(colors.$mainColors, 'blue-color-100');
+
+  & > .service__icon {
+    background: url(/images/service-icon/hover.svg) center center no-repeat;
+    background-size: contain;
+  }
+
+  & > .service__heading {
+    color: map.get(colors.$mainColors, 'white-color-100');
+  }
+
+  & > .service__description {
+    color: map.get(colors.$mainColors, 'white-color-100');
+  }
+}

@@ -1,1 +1,54 @@
-.service {}
+.service {
+  position: relative;
+  width: 412px;
+  //height: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  container-type: inline-size;
+
+  outline: 2px dashed red;
+
+  @media screen and (max-width: 834px) {
+    width: 336px;
+    //height: 205px;
+    padding: 32px;
+  }
+
+  @media screen and (max-width: 390px) {
+    width: 250px;
+    //height: 205px;
+    padding: 16px;
+  }
+
+  @container (max-width: 336px) {
+    .service {
+      &__heading {
+        font-size: 20px;
+        line-height: 120%;
+      }
+
+      &__description {
+        width: 272px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @container (max-width: 390px) {
+    .service {
+      &__heading {
+        text-align: center;
+      }
+
+      &__description {
+        width: 218px;
+      }
+    }
+  }
+}

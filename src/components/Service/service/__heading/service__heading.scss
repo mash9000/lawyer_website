@@ -1,0 +1,6 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.service__heading {
+  @include tf.text-formatter('service-heading');
+  margin-bottom: 10px;
+}
