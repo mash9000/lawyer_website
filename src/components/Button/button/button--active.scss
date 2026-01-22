@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use '../../../styles/color';
+
+.button--active:active {
+  color: map.get(color.$mainColors, 'colors-black-text');
+  background-color: map.get(color.$mainColors, 'white-color-300');
+  border-color: map.get(color.$mainColors, 'white-color-300');
+}

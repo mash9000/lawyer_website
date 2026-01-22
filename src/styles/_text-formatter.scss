@@ -1,3 +1,24 @@
-@mixin text-formatter ($element) {
+@use 'sass:map';
+@use './color';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+@mixin universal-text-formatter {
+  font: {
+    family: "Nunito Sans", sans-serif;
+    optical-sizing: auto;
+    style: normal;
+    variation-settings: "wdth" 100, "YTLC" 500;
+  }
+}
+
+@mixin text-formatter($element) {
+  @if ($element == 'button') {
+    @include universal-text-formatter;
+    font: {
+      weight: 900;
+      size: 14px;
+    }
+    text-transform: uppercase;
+    color: map.get(color.$mainColors, 'white-color-100');
+  }
 }
