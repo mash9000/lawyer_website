@@ -75,6 +75,7 @@
     margin-top: 24px;
     width: 280px;
     text-align: center;
+    background-color: #fff;
   } @else if ($element == 'staff-card-job-title') {
     @include universal-text-formatter;
     font: {
@@ -105,9 +106,9 @@
     }
     line-height: 120%;
     color: map.get(colors.$mainColors, 'colors-black-text');
-    margin-top: 40px;
+    margin: 40px auto 0;
     width: 233px;
-    text-align: center;
+    display: inline-block;
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }
