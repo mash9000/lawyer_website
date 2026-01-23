@@ -39,14 +39,20 @@ export const App = () => {
                 contactEmail='janis62@yahoo.com'
                 requestACall={requestACall}
                 baseLinks={baseLinks}>
-            <p className='style-one'>оказываем весь комплекс</p>
-            <h1 className='style-two'>юридических услуг</h1>
-            <p className='style-three'>Давно выяснено, что при оценке дизайна и
-                композиции читаемый текст мешает сосредоточиться. Lorem Ipsum
-                используют потому, что тот обеспечивает более или менее
-                стандартное заполнение.</p>
-            <Button title='Наши услуги'
-                    functionPerformed={() => console.info('ссылка ведёт на какую-то страницу')}/>
+            <div className='custom-style'>
+                <p className='custom-style__style-one'>оказываем весь
+                    комплекс</p>
+                <h1 className='custom-style__style-two'>юридических услуг</h1>
+                <p className='custom-style__style-three'>Давно выяснено, что при
+                    оценке дизайна и
+                    композиции читаемый текст мешает сосредоточиться. Lorem
+                    Ipsum
+                    используют потому, что тот обеспечивает более или менее
+                    стандартное заполнение.</p>
+                <Button title='Наши услуги'
+                        functionPerformed={() => console.info('ссылка ведёт на какую-то страницу')}
+                        additionalStylesForSomeReason={{height: '49px'}}/>
+            </div>
         </Header>
     );
 }

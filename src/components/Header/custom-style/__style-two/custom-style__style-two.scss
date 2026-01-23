@@ -1,0 +1,6 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.custom-style__style-two {
+  @include tf.text-formatter('custom-style-p2');
+  margin-bottom: 8px;
+}

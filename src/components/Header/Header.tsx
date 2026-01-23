@@ -11,6 +11,11 @@ import './header/__nav/__base-links/__inner-block/header__nav__base-links--logo.
 import './header/__nav/__base-links/__inner-block/header__nav__base-links--nav.scss';
 import './header/__nav/__base-links/__inner-block/header__nav__base-links--nav--hover.scss';
 
+import './custom-style/custom-style.scss';
+import './custom-style/__style-one/custom-style__style-one.scss';
+import './custom-style/__style-two/custom-style__style-two.scss';
+import './custom-style/__style-three/custom-style__style-three.scss';
+
 import type {HeaderProps} from "./model/HeaderProps.ts";
 import type {FC} from "react";
 
