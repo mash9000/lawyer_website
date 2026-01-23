@@ -1,0 +1,5 @@
+@use '../../../../../../styles/text-formatter' as tf;
+
+.header__nav__base-links--nav--hover:hover {
+  @include tf.text-formatter('nav-links-hover');
+}

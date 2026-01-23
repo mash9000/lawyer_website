@@ -7,6 +7,9 @@ import './header/__nav/__communication-unit/header__nav__communication-unit--con
 import './header/__nav/__communication-unit/__inner-block/header__nav__communication-unit__inner-block.scss';
 import './header/__nav/__base-links/header__nav__base-links.scss';
 import './header/__nav/__base-links/__inner-block/header__nav__base-links__inner-block.scss';
+import './header/__nav/__base-links/__inner-block/header__nav__base-links--logo.scss';
+import './header/__nav/__base-links/__inner-block/header__nav__base-links--nav.scss';
+import './header/__nav/__base-links/__inner-block/header__nav__base-links--nav--hover.scss';
 
 import type {HeaderProps} from "./model/HeaderProps.ts";
 import type {FC} from "react";
@@ -33,7 +36,7 @@ export const Header: FC<HeaderProps> = ({
                 </div>
                 <div className='header__nav__base-links'>
                     <div className='header__nav__base-links__inner-block'>
-                        <a className='header__nav__base-lins--logo'
+                        <a className='header__nav__base-links--logo'
                            href='http://localhost:5173/'
                            target="_self">
                             <h6>правозащитник</h6>
@@ -42,7 +45,7 @@ export const Header: FC<HeaderProps> = ({
                         {baseLinks.map((link: { text: string, link: URL }) => (
                             <a key={link.text}
                                href={link.link.href}
-                               className='header__nav__base-lins--nav header__nav__base-lins--nav--hover'
+                               className='header__nav__base-links--nav header__nav__base-links--nav--hover'
                                target='_blank'>{link.text}</a>
                         ))}
                     </div>

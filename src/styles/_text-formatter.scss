@@ -154,6 +154,37 @@
       size: 14px;
     }
     color: map.get(colors.$mainColors, 'blue-color-100');
+  } @else if ($element == 'nav-logo') {
+    @include universal-text-formatter;
+    text-decoration: none;
+    & > h6 {
+      font: {
+        weight: 900;
+        size: 28px;
+      }
+      line-height: 150%;
+      text-transform: uppercase;
+      color: map.get(colors.$mainColors, 'blue-color-100');
+    }
+
+    & > span {
+      font: {
+        weight: 900;
+        size: 20px;
+      }
+      color: map.get(colors.$mainColors, 'white-color-100');
+    }
+  } @else if ($element == 'nav-links') {
+    @include universal-text-formatter;
+    font: {
+      weight: 700;
+      size: 18px;
+    }
+    color: map.get(colors.$mainColors, 'white-color-100');
+    text-decoration: none;
+  } @else if ($element == 'nav-links-hover') {
+    text-decoration: underline;
+    color: map.get(colors.$mainColors, 'blue-color-100');
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }

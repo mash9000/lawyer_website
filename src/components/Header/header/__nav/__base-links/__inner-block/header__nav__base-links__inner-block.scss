@@ -2,4 +2,8 @@
   width: 1320px;
   height: inherit;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 32px;
 }

@@ -1,0 +1,8 @@
+@use '../../../../../../styles/text-formatter' as tf;
+
+.header__nav__base-links--logo {
+  width: 312px;
+  height: 62px;
+  margin-right: auto;
+  @include tf.text-formatter('nav-logo');
+}
