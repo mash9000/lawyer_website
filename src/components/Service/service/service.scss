@@ -1,7 +1,7 @@
 .service {
   position: relative;
   width: 412px;
-  //height: 250px;
+  height: 250px;
   padding: 20px;
   box-sizing: border-box;
 
@@ -10,45 +10,44 @@
   align-items: center;
   justify-content: center;
 
-  container-type: inline-size;
+  transition: .5s;
 
-  outline: 2px dashed red;
+  container-type: inline-size;
 
   @media screen and (max-width: 834px) {
     width: 336px;
-    //height: 205px;
-    padding: 32px;
+    height: 229px;
   }
 
   @media screen and (max-width: 390px) {
     width: 250px;
-    //height: 205px;
-    padding: 16px;
+    height: 215px;
   }
 
   @container (max-width: 336px) {
-    .service {
-      &__heading {
-        font-size: 20px;
-        line-height: 120%;
-      }
+    .service__heading {
+      display: inline-block;
+      width: 272px;
+      text-align: center;
+      margin: 0 auto;
+    }
 
-      &__description {
-        width: 272px;
-        font-size: 14px;
-      }
+    .service__description {
+      display: inline-block;
+      width: 272px;
+      margin: 0 auto;
+      font-size: 14px;
     }
   }
 
-  @container (max-width: 390px) {
-    .service {
-      &__heading {
-        text-align: center;
-      }
+  @container (max-width: 250px) {
+    .service__heading {
+      width: 218px;
+    }
 
-      &__description {
-        width: 218px;
-      }
+    .service__description {
+      width: 218px;
+      background-color: lime;
     }
   }
 }

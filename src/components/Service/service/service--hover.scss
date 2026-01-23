@@ -7,13 +7,21 @@
   & > .service__icon {
     background: url(/images/service-icon/hover.svg) center center no-repeat;
     background-size: contain;
+    transition: .2s;
   }
 
   & > .service__heading {
     color: map.get(colors.$mainColors, 'white-color-100');
+    transition: .2s;
   }
 
   & > .service__description {
     color: map.get(colors.$mainColors, 'white-color-100');
+    transition: .2s;
+  }
+
+  & > .service__angles {
+    opacity: 1;
+    transition: .2s;
   }
 }

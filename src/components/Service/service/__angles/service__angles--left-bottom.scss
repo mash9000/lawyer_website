@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use '../../../../styles/colors';
+
+.service__angles--left-bottom {
+  border-left: 1px solid map.get(colors.$mainColors, 'white-color-100');
+  border-bottom: 1px solid map.get(colors.$mainColors, 'white-color-100');
+  left: 20px;
+  bottom: 20px;
+}
