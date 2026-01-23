@@ -7,6 +7,6 @@
   padding: 1.5px;
   display: inline-block;
   @include tf.text-formatter('nav-contact-telephone-and-email');
-  background: url(/images/header/icons/email.svg) no-repeat 18px 5px;
+  background: url(/images/header/icons/email.svg) no-repeat left 5px;
   background-size: 16.67px auto;
 }
