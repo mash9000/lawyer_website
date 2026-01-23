@@ -7,7 +7,7 @@
   height: 49px;
   box-sizing: border-box;
   padding: 0 24px;
-  background-color: map.get(color.$mainColors, 'blue-color-100');
-  border: 2px solid map.get(color.$mainColors, 'blue-color-100');
+  background-color: map.get(colors.$mainColors, 'blue-color-100');
+  border: 2px solid map.get(colors.$mainColors, 'blue-color-100');
   @include text-formatter.text-formatter('button');
 }

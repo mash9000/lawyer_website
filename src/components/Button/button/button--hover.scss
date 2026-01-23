@@ -2,6 +2,6 @@
 @use '../../../styles/colors';
 
 .button--hover:hover {
-  background-color: map.get(color.$mainColors, 'white-color-100');
-  color: map.get(color.$mainColors, 'blue-color-100');
+  background-color: map.get(colors.$mainColors, 'white-color-100');
+  color: map.get(colors.$mainColors, 'blue-color-100');
 }

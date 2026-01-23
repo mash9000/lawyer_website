@@ -1,15 +1,52 @@
-import type {ContentProps} from "./components/Content/model/ContentProps.ts";
-import {Content} from "./components/Content/Content.tsx";
+import {Header} from "./components/Header/Header.tsx";
+import {Button} from "./components/Button/Button.tsx";
 
 export const App = () => {
-    const content: ContentProps = {
-        imageSrc: '/images/news/e577d2cba4ef02d0dbd8482539ac3c6ea930c0f8.webp',
-        heading: 'Воистину радостный звук: шёпот бессменных лидеров',
-        publicationDate: new Date(2023, 3, 24),
-        body: 'Предварительные выводы неутешительны: синтетическое тестирование, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для экономической целесообразности принимаемых решений. '
+    const requestACall = {
+        text: 'Заказать звонок',
+        actionBeingPerformed: () => console.info('звонок заказан')
     }
 
+    const baseLinks = [
+        {
+            text: 'Услуги',
+            link: new URL('http://localhost:5173/')
+        },
+        {
+            text: 'О компании',
+            link: new URL('http://localhost:5173/')
+        },
+        {
+            text: 'Наши юристы',
+            link: new URL('http://localhost:5173/')
+        },
+        {
+            text: 'Отзывы',
+            link: new URL('http://localhost:5173/')
+        },
+        {
+            text: 'Новости',
+            link: new URL('http://localhost:5173/')
+        },
+        {
+            text: 'Контакты',
+            link: new URL('http://localhost:5173/')
+        },
+    ];
+
     return (
-        <Content {...content}/>
+        <Header contactTelephoneNumber='89999999999'
+                contactEmail='zhena@zhizni.net'
+                requestACall={requestACall}
+                baseLinks={baseLinks}>
+            <p className='style-one'>оказываем весь комплекс</p>
+            <h1 className='style-two'>юридических услуг</h1>
+            <p className='style-three'>Давно выяснено, что при оценке дизайна и
+                композиции читаемый текст мешает сосредоточиться. Lorem Ipsum
+                используют потому, что тот обеспечивает более или менее
+                стандартное заполнение.</p>
+            <Button title='Наши услуги'
+                    functionPerformed={() => console.info('ссылка ведёт на какую-то страницу')}/>
+        </Header>
     );
 }

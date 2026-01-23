@@ -2,7 +2,7 @@
 @use '../../../styles/colors';
 
 .button--active:active {
-  color: map.get(color.$mainColors, 'colors-black-text');
-  background-color: map.get(color.$mainColors, 'white-color-300');
-  border-color: map.get(color.$mainColors, 'white-color-300');
+  color: map.get(colors.$mainColors, 'colors-black-text');
+  background-color: map.get(colors.$mainColors, 'white-color-300');
+  border-color: map.get(colors.$mainColors, 'white-color-300');
 }
