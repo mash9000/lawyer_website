@@ -1,7 +1,7 @@
 @use '../../../../styles/text-formatter' as tf;
 
 .content__body {
-  width: 424px;
+  width: inherit;
   margin-top: 16px;
   @include tf.text-formatter('content-body');
 }
