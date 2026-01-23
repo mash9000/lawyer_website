@@ -10,4 +10,30 @@
   box-shadow: 2px 2px 12px rgba(33, 33, 33, 0.12);
   overflow: hidden;
   position: relative;
+
+  container-type: inline-size;
+
+  @media screen and (max-width: 390px) {
+    width: 250px;
+    height: 329px;
+  }
+
+  @container (max-width: 250px) {
+    .staff-card__container-for-avatar {
+      width: 250px;
+      height: 235px;
+    }
+
+    .staff-card__container-for-avatar__avatar {
+      height: 235px;
+    }
+
+    .staff-card__txt-info {
+      margin-top: -95px;
+    }
+
+    .staff-card__full-name {
+      width: 218px;
+    }
+  }
 }
