@@ -36,7 +36,7 @@ export const App = () => {
 
     return (
         <Header contactTelephoneNumber='+7 (922) 022-94-82'
-                contactEmail='zhena@zhizni.net'
+                contactEmail='janis62@yahoo.com'
                 requestACall={requestACall}
                 baseLinks={baseLinks}>
             <p className='style-one'>оказываем весь комплекс</p>
