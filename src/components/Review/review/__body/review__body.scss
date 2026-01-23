@@ -1,0 +1,7 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.review__body {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  @include tf.text-formatter('review-body');
+}

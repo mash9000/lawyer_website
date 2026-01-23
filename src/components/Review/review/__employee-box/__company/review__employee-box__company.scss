@@ -1,0 +1,5 @@
+@use '../../../../../styles/text-formatter' as tf;
+
+.review__employee-box__company {
+  @include tf.text-formatter('review-company');
+}

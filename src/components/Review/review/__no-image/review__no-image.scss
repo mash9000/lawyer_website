@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use '../../../../styles/colors';
+
+.review__no-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: map.get(colors.$mainColors, 'white-color-300');
+}

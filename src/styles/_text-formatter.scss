@@ -37,6 +37,32 @@
     }
     line-height: 120%;
     text-align: center;
+    color: map.get(colors.$mainColors, 'colors-black-text');white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } @else if ($element == 'review-company') {
+    @include universal-text-formatter;
+    font: {
+      weight: 300;
+      size: 14px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else if ($element == 'review-name') {
+    @include universal-text-formatter;
+    font: {
+      weight: 700;
+      size: 20px;
+    }
+    line-height: 150%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else if ($element == 'review-body') {
+    @include universal-text-formatter;
+    font: {
+      weight: 400;
+      size: 14px;
+    }
+    line-height: 150%;
     color: map.get(colors.$mainColors, 'colors-black-text');
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
