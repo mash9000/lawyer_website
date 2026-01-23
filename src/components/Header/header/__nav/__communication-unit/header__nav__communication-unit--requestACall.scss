@@ -1,0 +1,13 @@
+@use '../../../../../styles/text-formatter' as tf;
+
+.header__nav__communication-unit--requestACall{
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: none;
+  @include tf.text-formatter('nav-request-a-call');
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}

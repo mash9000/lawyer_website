@@ -137,6 +137,23 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
+  } @else if ($element == 'nav-contact-telephone-and-email') {
+    @include universal-text-formatter;
+    font: {
+      weight: 600;
+      size: 14px;
+    }
+    color: #fff;
+    text-align: right;
+    text-decoration: none;
+    line-height: 20px;
+  } @else if ($element == 'nav-request-a-call') {
+    @include universal-text-formatter;
+    font: {
+      weight: 700;
+      size: 14px;
+    }
+    color: map.get(colors.$mainColors, 'blue-color-100');
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }

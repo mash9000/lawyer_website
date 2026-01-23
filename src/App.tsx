@@ -35,7 +35,7 @@ export const App = () => {
     ];
 
     return (
-        <Header contactTelephoneNumber='89999999999'
+        <Header contactTelephoneNumber='+7 (922) 022-94-82'
                 contactEmail='zhena@zhizni.net'
                 requestACall={requestACall}
                 baseLinks={baseLinks}>

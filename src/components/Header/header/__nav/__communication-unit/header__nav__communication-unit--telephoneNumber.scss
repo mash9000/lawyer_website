@@ -1,0 +1,12 @@
+@use '../../../../../styles/text-formatter' as tf;
+
+.header__nav__communication-unit--telephoneNumber {
+  width: 162px;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 1.5px;
+  display: inline-block;
+  @include tf.text-formatter('nav-contact-telephone-and-email');
+  background: url(/images/header/icons/telephone.svg) no-repeat 12px center;
+  background-size: 11.67px auto;
+}
