@@ -8,32 +8,16 @@
   }
 
   &:hover .staff-card__txt-info {
-    padding-top: 43px;
+    padding-top: 45px;
     transition: .5s;
+
+    @media screen and (max-width: 390px) {
+      padding-top: 105px;
+    }
   }
 
   &:hover .staff-card__angles {
     opacity: 1;
     transition: .5s;
-  }
-
-  @media screen and (max-width: 390px) {
-    & .staff-card__container-for-avatar, & .staff-card__txt-info {
-      transition: none;
-    }
-
-    &:hover .staff-card__container-for-avatar, &:hover .staff-card__txt-info {
-      transform: none;
-    }
-
-    &:hover .staff-card__txt-info {
-      padding-top: 0;
-      transition: none;
-    }
-
-    &:hover .staff-card__angles {
-      opacity: 0;
-      transition: none;
-    }
   }
 }

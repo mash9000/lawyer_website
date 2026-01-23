@@ -29,7 +29,19 @@
     }
 
     .staff-card__txt-info {
+      width: 218px;
       margin-top: -95px;
+
+      & > .staff-card__appeal {
+        margin-top: 20px;
+        width: inherit;
+      }
+
+      & > .staff-card__achievement {
+        width: inherit;
+        text-align: center;
+        margin-top: 20px;
+      }
     }
 
     .staff-card__full-name {
