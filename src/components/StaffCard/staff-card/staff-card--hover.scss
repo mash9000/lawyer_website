@@ -1,6 +1,6 @@
 .staff-card--hover {
   & .staff-card__container-for-avatar, & .staff-card__txt-info {
-    transition: transform 0.5s ease-in-out;
+    transition: transform .5s ease-in-out;
   }
 
   &:hover .staff-card__container-for-avatar, &:hover .staff-card__txt-info {
@@ -9,6 +9,11 @@
 
   &:hover .staff-card__txt-info {
     padding-top: 43px;
-    transition: 0.5s;
+    transition: .5s;
+  }
+
+  &:hover .staff-card__angles {
+    opacity: 1;
+    transition: .5s;
   }
 }

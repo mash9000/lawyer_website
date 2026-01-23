@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use '../../../../styles/colors';
+
+.staff-card__angles--right-top {
+  border-right: 1px solid map.get(colors.$mainColors, 'blue-color-100');
+  border-top: 1px solid map.get(colors.$mainColors, 'blue-color-100');
+  right: 20px;
+  top: 20px;
+}

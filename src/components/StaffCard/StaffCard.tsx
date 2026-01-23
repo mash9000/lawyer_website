@@ -1,4 +1,9 @@
 import './staff-card/staff-card.scss';
+import './staff-card/__angles/staff-card__angles.scss';
+import './staff-card/__angles/staff-card__angles--right-bottom.scss';
+import './staff-card/__angles/staff-card__angles--left-bottom.scss';
+import './staff-card/__angles/staff-card__angles--right-top.scss';
+import './staff-card/__angles/staff-card__angles--left-top.scss';
 import './staff-card/staff-card--hover.scss';
 import './staff-card/__container-for-avatar/staff-card__container-for-avatar.scss';
 import './staff-card/__container-for-avatar/__avatar/staff-card__container-for-avatar__avatar.scss';
@@ -20,6 +25,10 @@ export const StaffCard: FC<StaffCardProps> = ({
                                               }) => {
     return (
         <div className="staff-card staff-card--hover">
+            <span className='staff-card__angles staff-card__angles--right-bottom'></span>
+            <span className='staff-card__angles staff-card__angles--right-top'></span>
+            <span className='staff-card__angles staff-card__angles--left-bottom'></span>
+            <span className='staff-card__angles staff-card__angles--left-top'></span>
             <div className='staff-card__container-for-avatar'>
                 <img
                     className='staff-card__container-for-avatar__avatar'
