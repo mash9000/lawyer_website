@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '../../../../../../styles/colors';
+
+.header__nav__base-links--burger-menu {
+  width: 18px;
+  height: 16px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  opacity: 0;
+
+  & > div {
+    height: 2px;
+    background: map.get(colors.$mainColors, 'white-color-100');
+
+    &:nth-child(1), &:nth-child(3) {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      width: 60%;
+    }
+  }
+}

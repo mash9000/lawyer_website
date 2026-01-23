@@ -10,6 +10,7 @@ import './header/__nav/__base-links/__inner-block/header__nav__base-links__inner
 import './header/__nav/__base-links/__inner-block/header__nav__base-links--logo.scss';
 import './header/__nav/__base-links/__inner-block/header__nav__base-links--nav.scss';
 import './header/__nav/__base-links/__inner-block/header__nav__base-links--nav--hover.scss';
+import './header/__nav/__base-links/__inner-block/header__nav__base-links--burger-menu.scss';
 
 import './custom-style/custom-style.scss';
 import './custom-style/__style-one/custom-style__style-one.scss';
@@ -35,7 +36,8 @@ export const Header: FC<HeaderProps> = ({
                            href={`tel:${contactTelephoneNumber}`}>{contactTelephoneNumber}</a>
                         <a className='header__nav__communication-unit--contactEmail'
                            href={`mailto:${contactEmail}`}>{contactEmail}</a>
-                        <button type='button' className='header__nav__communication-unit--requestACall'
+                        <button type='button'
+                                className='header__nav__communication-unit--requestACall'
                                 onClick={() => requestACall.actionBeingPerformed()}>{requestACall.text}</button>
                     </div>
                 </div>
@@ -53,6 +55,11 @@ export const Header: FC<HeaderProps> = ({
                                className='header__nav__base-links--nav header__nav__base-links--nav--hover'
                                target='_blank'>{link.text}</a>
                         ))}
+                        <div className='header__nav__base-links--burger-menu'>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
                 </div>
             </nav>

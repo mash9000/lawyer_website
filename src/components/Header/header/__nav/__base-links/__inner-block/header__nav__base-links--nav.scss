@@ -2,4 +2,8 @@
 
 .header__nav__base-links--nav {
   @include tf.text-formatter('nav-links');
+
+  &:last-child {
+    margin-right: 50px;
+  }
 }

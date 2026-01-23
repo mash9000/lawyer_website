@@ -194,6 +194,7 @@
     line-height: 150%;
     color: #fff;
     text-transform: uppercase;
+    text-align: center;
   } @else if ($element == 'custom-style-p2') {
     @include universal-text-formatter;
     font: {
@@ -203,6 +204,7 @@
     line-height: 150%;
     color: map.get(colors.$mainColors, 'blue-color-100');
     text-transform: uppercase;
+    text-align: center;
   } @else if ($element == 'custom-style-p3') {
     @include universal-text-formatter;
     font: {
