@@ -64,6 +64,50 @@
     }
     line-height: 150%;
     color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else if ($element == 'staff-card-full-name') {
+    @include universal-text-formatter;
+    font: {
+      weight: 700;
+      size: 16px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+    margin-top: 24px;
+    width: 280px;
+    text-align: center;
+  } @else if ($element == 'staff-card-job-title') {
+    @include universal-text-formatter;
+    font: {
+      weight: 300;
+      size: 14px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+    margin-top: 10px;
+    width: 280px;
+    text-align: center;
+  } @else if ($element == 'staff-card-appeal') {
+    @include universal-text-formatter;
+    font: {
+      weight: 300;
+      size: 14px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+    margin-top: 40px;
+    width: 265px;
+    text-align: center;
+  } @else if ($element == 'staff-card-achievement') {
+    @include universal-text-formatter;
+    font: {
+      weight: 600;
+      size: 16px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+    margin-top: 40px;
+    width: 233px;
+    text-align: center;
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }

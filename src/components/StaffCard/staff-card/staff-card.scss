@@ -1,1 +1,16 @@
-.staff-card {}
+.staff-card {
+  width: 312px;
+  height: 414px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 12px rgba(33, 33, 33, 0.12);
+  overflow: hidden;
+
+  @media screen and (max-width: 390px) {
+    width: 250px;
+    height: 329px;
+  }
+
+  outline: 2px dashed red;
+}

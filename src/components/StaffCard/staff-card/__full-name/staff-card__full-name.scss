@@ -1,0 +1,5 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.staff-card__full-name {
+  @include tf.text-formatter('staff-card-full-name');
+}
