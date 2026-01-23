@@ -1,4 +1,7 @@
 import './content/content.scss';
+import './content/__cover-img/content__cover-img.scss';
+import './content/content--hover.scss';
+import './content/__show/content__show.scss';
 import './content/__body/content__body.scss';
 import './content/__publication-date/content__publication-date.scss';
 import './content/__heading/content__heading.scss';
@@ -22,13 +25,13 @@ export const Content: FC<ContentProps> = ({
                                               body
                                           }) => {
     return (
-        <article className='content'>
-            <span
-                className='content__angles content__angles--right-bottom'></span>
+        <article className='content content--hover'>
+            <div className='content__cover-img'></div>
+            <span className='content__angles content__angles--right-bottom'></span>
             <span className='content__angles content__angles--right-top'></span>
-            <span
-                className='content__angles content__angles--left-bottom'></span>
+            <span className='content__angles content__angles--left-bottom'></span>
             <span className='content__angles content__angles--left-top'></span>
+            <div className='content__show'></div>
             <div className='content__container-for-image'>
                 <img
                     className='content__image'

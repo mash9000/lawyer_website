@@ -1,3 +1,9 @@
-.content__angles--right-top {
+@use 'sass:map';
+@use '../../../../styles/colors';
 
+.content__angles--right-top {
+  border-top: 1px solid map.get(colors.$mainColors, 'white-color-100');
+  border-right: 1px solid map.get(colors.$mainColors, 'white-color-100');
+  right: 32px;
+  top: 20px;
 }
