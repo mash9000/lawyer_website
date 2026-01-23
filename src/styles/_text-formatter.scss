@@ -109,6 +109,34 @@
     margin: 40px auto 0;
     width: 233px;
     display: inline-block;
+  } @else if ($element == 'content-header') {
+    @include universal-text-formatter;
+    font: {
+      weight: 700;
+      size: 16px;
+    }
+    line-height: 160%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else if ($element == 'content-publication-date') {
+    @include universal-text-formatter;
+    font: {
+      weight: 300;
+      size: 12px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else if ($element == 'content-body') {
+    @include universal-text-formatter;
+    font: {
+      weight: 400;
+      size: 14px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }

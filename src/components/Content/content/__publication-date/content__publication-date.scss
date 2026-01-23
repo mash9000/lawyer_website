@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../../../../styles/text-formatter' as tf;
+@use '../../../../styles/colors';
+
+.content__publication-date {
+  position: relative;
+  margin-top: 16px;
+  @include tf.text-formatter('content-publication-date');
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 314px;
+    height: 1px;
+    background-color: map.get(colors.$mainColors, 'white-color-200');
+    right: 0;
+    top: 8px;
+  }
+}

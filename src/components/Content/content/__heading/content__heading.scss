@@ -1,0 +1,7 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.content__heading {
+  width: 424px;
+  margin-top: 24.5px;
+  @include tf.text-formatter('content-header');
+}
