@@ -16,4 +16,9 @@
     height: 3px;
     background-color: map.get(colors.$mainColors, 'blue-color-100');
   }
+
+  @media screen and (max-width: 710px) {
+    width: 342px;
+    font-size: 20px !important;
+  }
 }

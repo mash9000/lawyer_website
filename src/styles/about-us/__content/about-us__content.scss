@@ -3,4 +3,26 @@
   height: 424px;
   display: flex;
   flex-wrap: wrap;
+  
+  @media screen and (max-width: 1319px) {
+    width: 696px;
+  }
+
+  @media screen and (max-width: 710px) {
+    margin-top: -150px;
+    width: 342px;
+    height: 550px;
+
+    & .about-us__description {
+      width: 342px;
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+
+    & .about-us__buttons {
+      justify-content: center;
+    }
+  }
 }

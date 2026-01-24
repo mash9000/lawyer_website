@@ -3,4 +3,8 @@
   height: auto;
   margin-left: 64px;
   box-shadow: 4px 4px 12px rgba(33, 33, 33, 0.25);
+
+  @media screen and (max-width: 1319px) {
+    display: none;
+  }
 }
