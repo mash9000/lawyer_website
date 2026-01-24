@@ -1,39 +1,9 @@
 import {Header} from "./components/Header/Header.tsx";
 import {Button} from "./components/Button/Button.tsx";
+import {requestACall} from "./data/request-a-call.ts";
+import {baseLinks} from "./data/links.ts";
 
 export const App = () => {
-    const requestACall = {
-        text: 'Заказать звонок',
-        actionBeingPerformed: () => console.info('звонок заказан')
-    }
-
-    const baseLinks = [
-        {
-            text: 'Услуги',
-            link: new URL('http://localhost:5173/')
-        },
-        {
-            text: 'О компании',
-            link: new URL('http://localhost:5173/')
-        },
-        {
-            text: 'Наши юристы',
-            link: new URL('http://localhost:5173/')
-        },
-        {
-            text: 'Отзывы',
-            link: new URL('http://localhost:5173/')
-        },
-        {
-            text: 'Новости',
-            link: new URL('http://localhost:5173/')
-        },
-        {
-            text: 'Контакты',
-            link: new URL('http://localhost:5173/')
-        },
-    ];
-
     return (
         <Header contactTelephoneNumber='+7 (922) 022-94-82'
                 contactEmail='janis62@yahoo.com'
