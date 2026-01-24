@@ -1,0 +1,5 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.burger-menu__link--hover:hover {
+  @include tf.text-formatter('nav-links-hover');
+}

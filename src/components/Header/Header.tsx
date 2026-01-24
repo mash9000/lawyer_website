@@ -18,7 +18,8 @@ import './custom-style/__style-two/custom-style__style-two.scss';
 import './custom-style/__style-three/custom-style__style-three.scss';
 
 import type {HeaderProps} from "./model/HeaderProps.ts";
-import type {FC} from "react";
+import {type FC, useState} from "react";
+import {BurgerMenu} from "../BurgerMenu/BurgerMenu.tsx";
 
 export const Header: FC<HeaderProps> = ({
                                             contactTelephoneNumber,
@@ -27,11 +28,17 @@ export const Header: FC<HeaderProps> = ({
                                             baseLinks,
                                             children
                                         }) => {
+    const [burgerMenuDisplay, setBurgerMenuDisplay] = useState<boolean>(false);
+    const openCloseBurgerMenu = () => {
+        setBurgerMenuDisplay(!burgerMenuDisplay);
+    }
+
     return (
         <header className='header'>
             <nav className='header__nav'>
                 <div className='header__nav__communication-unit'>
-                    <div className='header__nav__communication-unit__inner-block'>
+                    <div
+                        className='header__nav__communication-unit__inner-block'>
                         <a className='header__nav__communication-unit__inner-block__telephone-number'
                            href={`tel:${contactTelephoneNumber}`}>{contactTelephoneNumber}</a>
                         <a className='header__nav__communication-unit__inner-block__contact-email'
@@ -55,17 +62,22 @@ export const Header: FC<HeaderProps> = ({
                                className='header__nav__base-links__inner-block__link header__nav__base-links__inner-block__link--hover'
                                target='_blank'>{link.text}</a>
                         ))}
-                        <div className='header__nav__base-links__inner-block__burger-menu'>
+                        <div
+                            className='header__nav__base-links__inner-block__burger-menu'>
                             <div></div>
                             <div></div>
                             <div></div>
                         </div>
+                        <BurgerMenu
+                            links={baseLinks}
+                            condition={burgerMenuDisplay}/>
                     </div>
                 </div>
             </nav>
             <div className='header__main-information'>
                 {children}
             </div>
+            <button type='button' onClick={openCloseBurgerMenu}>ПУУУУУСК111...</button>
         </header>
     );
 }
