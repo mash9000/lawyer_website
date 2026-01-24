@@ -238,6 +238,14 @@
     line-height: 120%;
     color: map.get(colors.$mainColors, 'colors-black-text');
     text-align: center;
+  } @else if ($element == 'about-us-description') {
+    @include universal-text-formatter;
+    font: {
+      weight: 400;
+      size: 16px;
+    }
+    line-height: 150%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }

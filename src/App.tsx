@@ -11,6 +11,7 @@ import './styles/about-us/about-us.scss';
 import './styles/about-us/__content/about-us__content.scss';
 import './styles/about-us/__heading/about-us__heading--blue-span.scss';
 import './styles/about-us/__heading/about-us__heading.scss';
+import './styles/about-us/__description/about-us__description.scss';
 
 import {
     PageSectionHeading
@@ -69,6 +70,21 @@ export const App = () => {
                     <PageSectionHeading title={
                         <>Юридическая компания <span
                             className="about-us__heading--blue-span">правозащитник</span></>}/>
+                    <p className='about-us__description'>Давно выяснено, что при
+                        оценке дизайна и композиции читаемый текст мешает
+                        сосредоточиться. Lorem Ipsum используют потому, что тот
+                        обеспечивает более или менее стандартное заполнение.</p>
+                    <p className='about-us__description'>Есть много вариантов
+                        Lorem Ipsum, но большинство из них имеет не всегда
+                        приемлемые модификации, например, юмористические вставки
+                        или слова, которые даже отдалённо не напоминают латынь.
+                        Если вам нужен Lorem Ipsum для серьёзного проекта, вы
+                        наверняка не хотите какой-нибудь шутки, скрытой в
+                        середине абзаца.</p>
+                    <p className='about-us__description'>За прошедшие годы текст
+                        Lorem Ipsum получил много версий. Некоторые версии
+                        появились по ошибке, некоторые - намеренно (например,
+                        юмористические варианты).</p>
                 </div>
             </div>
         </>

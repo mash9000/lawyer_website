@@ -1,0 +1,6 @@
+@use '../../../styles/text-formatter' as tf;
+
+.about-us__description {
+  width: 720px;
+  @include tf.text-formatter('about-us-description');
+}
