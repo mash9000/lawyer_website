@@ -9,7 +9,9 @@ export const Button: FC<ButtonProps> = ({
                                             title,
                                             parameters,
                                             functionPerformed,
-                                            additionalStylesForSomeReason
+                                            additionalStylesForSomeReason,
+                                            role,
+                                            ariaLabel
                                         }) => {
     const internalExecutableFunction = (parameters?: any[]) => {
         functionPerformed(parameters);
@@ -17,6 +19,8 @@ export const Button: FC<ButtonProps> = ({
 
     return (
         <button
+            role={role}
+            aria-label={ariaLabel}
             type='button'
             className='button button--hover button--active'
             onClick={() => internalExecutableFunction(parameters)}

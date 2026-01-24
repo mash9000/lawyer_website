@@ -5,4 +5,6 @@ export interface ButtonProps {
     parameters?: any[];
     functionPerformed: (parameters?: any[]) => void;
     additionalStylesForSomeReason?: CSSProperties;
+    role?: string;
+    ariaLabel?: string;
 }

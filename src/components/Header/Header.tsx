@@ -44,17 +44,23 @@ export const Header: FC<HeaderProps> = ({
                 <div className='header__nav__communication-unit'>
                     <div
                         className='header__nav__communication-unit__inner-block'>
-                        <a className='header__nav__communication-unit__inner-block__telephone-number'
+                        <a aria-label='звонок на горячую линию'
+                           className='header__nav__communication-unit__inner-block__telephone-number'
                            href={`tel:${contactTelephoneNumber}`}>{contactTelephoneNumber}</a>
-                        <a className='header__nav__communication-unit__inner-block__contact-email'
+                        <a aria-label='написать письмо средством электронной почты'
+                           className='header__nav__communication-unit__inner-block__contact-email'
                            href={`mailto:${contactEmail}`}>{contactEmail}</a>
-                        <button type='button'
-                                className='header__nav__communication-unit__inner-block__request-a-call'
-                                onClick={() => requestACall.actionBeingPerformed()}>{requestACall.text}</button>
+                        <button
+                            type='button'
+                            className='header__nav__communication-unit__inner-block__request-a-call'
+                            onClick={() => requestACall.actionBeingPerformed()}>{requestACall.text}</button>
                     </div>
                 </div>
                 <div className='header__nav__base-links'>
-                    <div className='header__nav__base-links__inner-block'>
+                    <div
+                        role='group'
+                        aria-label='ссылки на основные услуги'
+                        className='header__nav__base-links__inner-block'>
                         <a className='header__nav__base-links__inner-block__logo'
                            href='http://localhost:5173/'
                            target="_self">
@@ -69,7 +75,8 @@ export const Header: FC<HeaderProps> = ({
                         ))}
                         <div
                             className='header__nav__base-links__inner-block__burger-menu'
-                            onClick={openMenu}>
+                            onClick={openMenu}
+                            role='button'>
                             <div></div>
                             <div></div>
                             <div></div>
@@ -81,7 +88,9 @@ export const Header: FC<HeaderProps> = ({
                     </div>
                 </div>
             </nav>
-            <div className='header__main-information'>
+            <div role='group'
+                 aria-label='приветственный баннер'
+                 className='header__main-information'>
                 {children}
             </div>
         </header>
