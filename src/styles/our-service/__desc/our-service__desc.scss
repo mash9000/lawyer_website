@@ -1,0 +1,7 @@
+@use '../../text-formatter' as tf;
+
+.our-service__desc {
+  width: 920px;
+  margin-top: 24px;
+  @include tf.text-formatter('our-service-desc');
+}

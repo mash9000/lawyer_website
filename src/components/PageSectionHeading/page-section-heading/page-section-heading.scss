@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../../../styles/text-formatter' as tf;
+@use '../../../styles/colors';
+
+.page-section-heading {
+  height: 55px;
+  position: relative;
+  @include tf.text-formatter('page-section-heading');
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 3px;
+    background-color: map.get(colors.$mainColors, 'blue-color-100');
+  }
+}
