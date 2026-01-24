@@ -5,6 +5,7 @@ import {baseLinks} from "./data/links.ts";
 
 import './styles/our-service/our-service.scss';
 import './styles/our-service/__desc/our-service__desc.scss';
+import './styles/our-service/__service-box/our-service__service-box.scss';
 import {
     PageSectionHeading
 } from "./components/PageSectionHeading/PageSectionHeading.tsx";
@@ -41,6 +42,9 @@ export const App = () => {
                     что тот обеспечивает более или менее стандартное заполнение
                     шаблона
                 </p>
+                <div className='our-service__service-box'>
+
+                </div>
             </div>
         </>
     );
