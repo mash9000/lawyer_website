@@ -12,6 +12,9 @@ import './styles/about-us/__content/about-us__content.scss';
 import './styles/about-us/__heading/about-us__heading--blue-span.scss';
 import './styles/about-us/__heading/about-us__heading.scss';
 import './styles/about-us/__description/about-us__description.scss';
+import './styles/about-us/__heading-and-description/about-us__heading-and-description.scss';
+import './styles/about-us/__buttons/about-us__buttons.scss';
+import './styles/about-us/__image/about-us__image.scss';
 
 import {
     PageSectionHeading
@@ -67,24 +70,53 @@ export const App = () => {
             </div>
             <div className='about-us'>
                 <div className='about-us__content'>
-                    <PageSectionHeading title={
-                        <>Юридическая компания <span
-                            className="about-us__heading--blue-span">правозащитник</span></>}/>
-                    <p className='about-us__description'>Давно выяснено, что при
-                        оценке дизайна и композиции читаемый текст мешает
-                        сосредоточиться. Lorem Ipsum используют потому, что тот
-                        обеспечивает более или менее стандартное заполнение.</p>
-                    <p className='about-us__description'>Есть много вариантов
-                        Lorem Ipsum, но большинство из них имеет не всегда
-                        приемлемые модификации, например, юмористические вставки
-                        или слова, которые даже отдалённо не напоминают латынь.
-                        Если вам нужен Lorem Ipsum для серьёзного проекта, вы
-                        наверняка не хотите какой-нибудь шутки, скрытой в
-                        середине абзаца.</p>
-                    <p className='about-us__description'>За прошедшие годы текст
-                        Lorem Ipsum получил много версий. Некоторые версии
-                        появились по ошибке, некоторые - намеренно (например,
-                        юмористические варианты).</p>
+                    <div className='about-us__heading-and-description'>
+                        <PageSectionHeading
+                            title={
+                                <>Юридическая компания <span
+                                    className="about-us__heading--blue-span">правозащитник</span></>}
+                            extraClass='about-us__heading'/>
+                        <p className='about-us__description'>Давно выяснено, что
+                            при
+                            оценке дизайна и композиции читаемый текст мешает
+                            сосредоточиться. Lorem Ipsum используют потому, что
+                            тот
+                            обеспечивает более или менее стандартное
+                            заполнение.</p>
+                        <p className='about-us__description'>Есть много
+                            вариантов
+                            Lorem Ipsum, но большинство из них имеет не всегда
+                            приемлемые модификации, например, юмористические
+                            вставки
+                            или слова, которые даже отдалённо не напоминают
+                            латынь.
+                            Если вам нужен Lorem Ipsum для серьёзного проекта,
+                            вы
+                            наверняка не хотите какой-нибудь шутки, скрытой в
+                            середине абзаца.</p>
+                        <p className='about-us__description'>За прошедшие годы
+                            текст
+                            Lorem Ipsum получил много версий. Некоторые версии
+                            появились по ошибке, некоторые - намеренно
+                            (например,
+                            юмористические варианты).</p>
+                    </div>
+                    <img
+                        className='about-us__image'
+                        src='/images/book.webp'
+                        alt='изображение книги'/>
+                    <div className='about-us__buttons'>
+                        <Button title='История компании'
+                                functionPerformed={() => console.info('история компании')}/>
+                        <Button title='Сертификаты'
+                                functionPerformed={() => console.info('сертификаты')}
+                                additionalStylesForSomeReason={
+                                    {
+                                        backgroundColor: '#E6E6E6',
+                                        color: '#222222',
+                                        borderColor: '#E6E6E6'
+                                    }}/>
+                    </div>
                 </div>
             </div>
         </>

@@ -3,6 +3,6 @@ import './page-section-heading/page-section-heading.scss';
 import type {PageSectionHeadingProps} from "./model/PageSectionHeadingProps.ts";
 import type {FC} from "react";
 
-export const PageSectionHeading: FC<PageSectionHeadingProps> = ({title}) => {
-    return <h1 className='page-section-heading about-us__heading'>{title}</h1>;
+export const PageSectionHeading: FC<PageSectionHeadingProps> = ({title, extraClass}) => {
+    return <h1 className={`page-section-heading ${extraClass}`}>{title}</h1>;
 }

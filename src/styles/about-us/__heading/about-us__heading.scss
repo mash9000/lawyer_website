@@ -6,6 +6,7 @@
   height: 55px;
   position: relative;
   @include tf.text-formatter('page-section-heading');
+  text-align: left;
 
   &:after {
     content: '';
