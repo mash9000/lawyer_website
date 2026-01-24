@@ -7,12 +7,17 @@ import './burger-menu/__link/burger-menu__link--hover.scss';
 import type {BurgerMenuProps} from "./model/BurgerMenuProps.ts";
 import type {FC} from "react";
 
-export const BurgerMenu: FC<BurgerMenuProps> = ({links, condition}) => {
+export const BurgerMenu: FC<BurgerMenuProps> = ({
+                                                    links,
+                                                    condition,
+                                                    closeMenuFunction
+                                                }) => {
     return (
         <nav className={`burger-menu ${condition ? 'burger-menu--open' : ''}`}>
             <button
                 type='button'
-                className='burger-menu__button-close'></button>
+                className='burger-menu__button-close'
+                onClick={() => closeMenuFunction()}></button>
             {links.map((link: { text: string, link: URL }) => (
                 <a key={link.text}
                    href={link.link.href}

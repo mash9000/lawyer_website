@@ -6,17 +6,18 @@
   height: 16px;
   margin-right: 24px;
   display: none;
+  z-index: 100;
 
   & > div {
     height: 2px;
     background: map.get(colors.$mainColors, 'white-color-100');
 
     &:nth-child(1), &:nth-child(3) {
-      width: 100%;
+      width: 18px;
     }
 
     &:nth-child(2) {
-      width: 60%;
+      width: 12px;
     }
   }
 }

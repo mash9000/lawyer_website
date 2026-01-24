@@ -8,6 +8,7 @@
   transition: .5s ease;
 
   & > a {
+    display: inline-block;
     color: map.get(colors.$mainColors, 'white-color-100');
     transition: 1s ease;
   }

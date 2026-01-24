@@ -183,6 +183,11 @@
     color: map.get(colors.$mainColors, 'white-color-100');
     text-decoration: none;
   } @else if ($element == 'nav-links-hover') {
+    @include universal-text-formatter;
+    font: {
+      weight: 700;
+      size: 18px;
+    }
     text-decoration: underline;
     color: map.get(colors.$mainColors, 'blue-color-100');
   } @else if ($element == 'custom-style-p1') {

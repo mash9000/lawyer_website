@@ -29,8 +29,13 @@ export const Header: FC<HeaderProps> = ({
                                             children
                                         }) => {
     const [burgerMenuDisplay, setBurgerMenuDisplay] = useState<boolean>(false);
-    const openCloseBurgerMenu = () => {
-        setBurgerMenuDisplay(!burgerMenuDisplay);
+
+    const openMenu = () => {
+        setBurgerMenuDisplay(true);
+    }
+
+    const closeMenu = () => {
+        setBurgerMenuDisplay(false);
     }
 
     return (
@@ -63,21 +68,22 @@ export const Header: FC<HeaderProps> = ({
                                target='_blank'>{link.text}</a>
                         ))}
                         <div
-                            className='header__nav__base-links__inner-block__burger-menu'>
+                            className='header__nav__base-links__inner-block__burger-menu'
+                            onClick={openMenu}>
                             <div></div>
                             <div></div>
                             <div></div>
                         </div>
                         <BurgerMenu
                             links={baseLinks}
-                            condition={burgerMenuDisplay}/>
+                            condition={burgerMenuDisplay}
+                            closeMenuFunction={closeMenu}/>
                     </div>
                 </div>
             </nav>
             <div className='header__main-information'>
                 {children}
             </div>
-            <button type='button' onClick={openCloseBurgerMenu}>ПУУУУУСК111...</button>
         </header>
     );
 }
