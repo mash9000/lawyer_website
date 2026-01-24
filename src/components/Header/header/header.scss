@@ -8,11 +8,11 @@
   container-type: inline-size;
   
   @media screen and (max-width: 1177px) {
-    .header__nav__base-links--nav {
+    .header__nav__base-links__link {
       display: none;
     }
 
-    .header__nav__base-links--burger-menu {
+    .header__nav__base-links__inner-block__burger-menu {
       display: flex;
       flex-direction: column;
       align-items: end;

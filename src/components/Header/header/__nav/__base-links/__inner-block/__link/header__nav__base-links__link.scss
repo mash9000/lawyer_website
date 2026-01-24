@@ -1,6 +1,6 @@
-@use '../../../../../../styles/text-formatter' as tf;
+@use '../../../../../../../styles/text-formatter' as tf;
 
-.header__nav__base-links--nav {
+.header__nav__base-links__link {
   @include tf.text-formatter('nav-links');
 
   &:nth-child(7){
