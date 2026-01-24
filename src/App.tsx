@@ -9,6 +9,9 @@ import './styles/our-service/__service-box/our-service__service-box.scss';
 import {
     PageSectionHeading
 } from "./components/PageSectionHeading/PageSectionHeading.tsx";
+import {services} from "./data/services.ts";
+import type {ServiceProps} from "./components/Service/model/ServiceProps.ts";
+import {Service} from "./components/Service/Service.tsx";
 
 export const App = () => {
     return (
@@ -43,8 +46,17 @@ export const App = () => {
                     шаблона
                 </p>
                 <div className='our-service__service-box'>
-
+                    {services.map((service: ServiceProps) => (
+                        <Service
+                            key={service.serviceName}
+                            serviceName={service.serviceName}
+                            serviceDescription={service.serviceDescription}/>
+                    ))}
                 </div>
+                <Button
+                    title='все услуги'
+                    functionPerformed={() => console.info('все услуги')}
+                    additionalStylesForSomeReason={{marginTop: '48px'}}/>
             </div>
         </>
     );

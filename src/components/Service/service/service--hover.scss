@@ -3,6 +3,7 @@
 
 .service--hover:hover {
   background: map.get(colors.$mainColors, 'blue-color-100');
+  cursor: pointer;
 
   & > .service__icon {
     background: url(/images/service-icon/hover.svg) center center no-repeat;

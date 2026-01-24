@@ -2,9 +2,11 @@
   width: 1320px;
   height: 538px;
   margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 38px;
 
   outline: 2px dashed green;
 }
