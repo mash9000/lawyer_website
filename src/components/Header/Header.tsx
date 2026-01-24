@@ -8,8 +8,8 @@ import './header/__nav/__communication-unit/__inner-block/header__nav__communica
 import './header/__nav/__base-links/header__nav__base-links.scss';
 import './header/__nav/__base-links/__inner-block/header__nav__base-links__inner-block.scss';
 import './header/__nav/__base-links/__inner-block/__logo/header__nav__base-links__inner-block__logo.scss';
-import './header/__nav/__base-links/__inner-block/__link/header__nav__base-links__link.scss';
-import './header/__nav/__base-links/__inner-block/__link/header__nav__base-links__link--hover.scss';
+import './header/__nav/__base-links/__inner-block/__link/header__nav__base-links__inner-block__link.scss';
+import './header/__nav/__base-links/__inner-block/__link/header__nav__base-links__inner-block__link--hover.scss';
 import './header/__nav/__base-links/__inner-block/__burger-menu/header__nav__base-links__inner-block__burger-menu.scss';
 
 import './custom-style/custom-style.scss';
@@ -52,7 +52,7 @@ export const Header: FC<HeaderProps> = ({
                         {baseLinks.map((link: { text: string, link: URL }) => (
                             <a key={link.text}
                                href={link.link.href}
-                               className='header__nav__base-links__link header__nav__base-links__link--hover'
+                               className='header__nav__base-links__inner-block__link header__nav__base-links__inner-block__link--hover'
                                target='_blank'>{link.text}</a>
                         ))}
                         <div className='header__nav__base-links__inner-block__burger-menu'>

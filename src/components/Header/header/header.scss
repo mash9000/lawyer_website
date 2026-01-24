@@ -5,20 +5,20 @@
   background-size: cover;
   position: relative;
 
-  container-type: inline-size;
-  
-  @media screen and (max-width: 1177px) {
-    .header__nav__base-links__link {
+  @media screen and (max-width: 1072px) {
+    & .header__nav__base-links__inner-block__link {
       display: none;
     }
 
-    .header__nav__base-links__inner-block__burger-menu {
+    & .header__nav__base-links__inner-block__burger-menu {
       display: flex;
       flex-direction: column;
-      align-items: end;
       justify-content: space-between;
+      align-items: end;
     }
-
+  }
+  
+  @media screen and (max-width: 834px) {
     .custom-style__style-one {
       font-size: 24px;
     }
@@ -32,17 +32,13 @@
     }
   }
 
-  @media screen and (max-width: 616px) {
-    .header__nav__communication-unit--contactEmail {
+  @media screen and (max-width: 541px) {
+    & .header__nav__communication-unit__inner-block__contact-email {
       display: none;
     }
   }
 
   @media screen and (max-width: 390px) {
-    .custom-style {
-      margin-top: 60px;
-    }
-
     .custom-style__style-one {
       font-size: 18px;
     }
