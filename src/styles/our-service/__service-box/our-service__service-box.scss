@@ -1,5 +1,5 @@
 .our-service__service-box {
-  width: 1320px;
+  width: inherit;
   height: 538px;
   margin-top: 48px;
   display: flex;
@@ -8,5 +8,21 @@
   align-items: center;
   gap: 38px;
 
-  outline: 2px dashed green;
+  @media screen and (max-width: 1320px) {
+    height: 770px;
+  }
+
+  @media screen and (max-width: 710px) {
+    overflow: scroll;
+    flex-wrap: nowrap;
+    height: 270px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & > .service {
+      flex-shrink: 0;
+    }
+  }
 }

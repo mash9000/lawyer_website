@@ -7,5 +7,20 @@
   align-items: center;
   justify-content: center;
 
-  outline: 2px dashed crimson;
+  @media screen and (max-width: 1320px) {
+    width: 710px;
+    height: 1050px;
+
+    & .our-service__desc {
+      width: 710px;
+    }
+  }
+
+  @media screen and (max-width: 710px) {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 24px;
+    height: 500px;
+  }
 }
