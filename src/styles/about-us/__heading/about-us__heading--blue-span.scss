@@ -1,0 +1,6 @@
+@use 'sass:map';
+@use '../../../styles/colors';
+
+.about-us__heading--blue-span {
+  color: map.get(colors.$mainColors, 'blue-color-100');
+}

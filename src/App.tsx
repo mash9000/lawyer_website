@@ -6,6 +6,12 @@ import {baseLinks} from "./data/links.ts";
 import './styles/our-service/our-service.scss';
 import './styles/our-service/__desc/our-service__desc.scss';
 import './styles/our-service/__service-box/our-service__service-box.scss';
+
+import './styles/about-us/about-us.scss';
+import './styles/about-us/__content/about-us__content.scss';
+import './styles/about-us/__heading/about-us__heading--blue-span.scss';
+import './styles/about-us/__heading/about-us__heading.scss';
+
 import {
     PageSectionHeading
 } from "./components/PageSectionHeading/PageSectionHeading.tsx";
@@ -57,6 +63,13 @@ export const App = () => {
                     title='все услуги'
                     functionPerformed={() => console.info('все услуги')}
                     additionalStylesForSomeReason={{marginTop: '48px'}}/>
+            </div>
+            <div className='about-us'>
+                <div className='about-us__content'>
+                    <PageSectionHeading title={
+                        <>Юридическая компания <span
+                            className="about-us__heading--blue-span">правозащитник</span></>}/>
+                </div>
             </div>
         </>
     );
