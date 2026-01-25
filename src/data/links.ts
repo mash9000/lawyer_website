@@ -1,6 +1,6 @@
 export const baseLinks = [
     {
-        text: 'Услуги',
+        text: 'Новые возможности',
         link: new URL('http://localhost:5173/')
     },
     {
