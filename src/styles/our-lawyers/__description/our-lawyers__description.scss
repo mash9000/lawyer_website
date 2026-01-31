@@ -1,0 +1,13 @@
+@use '../../text-formatter' as tf;
+
+.our-lawyers__description {
+  display: inline-block;
+  max-width: 920px;
+  margin: 24px auto 48px;
+  @include tf.text-formatter('our-lawyers-description');
+
+  @media screen and (max-width: 960px) {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}

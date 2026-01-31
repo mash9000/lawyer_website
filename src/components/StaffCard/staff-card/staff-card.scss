@@ -10,6 +10,8 @@
   box-shadow: 2px 2px 12px rgba(33, 33, 33, 0.12);
   overflow: hidden;
   position: relative;
+  background-color: #fff;
+  flex-shrink: 0;
 
   container-type: inline-size;
 

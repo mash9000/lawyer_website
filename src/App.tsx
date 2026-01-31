@@ -15,6 +15,9 @@ import './styles/about-us/__description/about-us__description.scss';
 import './styles/about-us/__heading-and-description/about-us__heading-and-description.scss';
 import './styles/about-us/__buttons/about-us__buttons.scss';
 import './styles/about-us/__image/about-us__image.scss';
+import './styles/our-lawyers/our-lawyers.scss';
+import './styles/our-lawyers/__description/our-lawyers__description.scss';
+import './styles/our-lawyers/__lawyers/our-lawyers__lawyers.scss';
 
 import {
     PageSectionHeading
@@ -22,6 +25,12 @@ import {
 import {services} from "./data/services.ts";
 import type {ServiceProps} from "./components/Service/model/ServiceProps.ts";
 import {Service} from "./components/Service/Service.tsx";
+import {lawyers} from "./data/lawyers.ts";
+import type {
+    StaffCardProps
+} from "./components/StaffCard/model/StaffCardProps.ts";
+import {StaffCard} from "./components/StaffCard/StaffCard.tsx";
+import {nanoid} from "nanoid";
 
 export const App = () => {
     return (
@@ -117,6 +126,24 @@ export const App = () => {
                                         borderColor: '#E6E6E6'
                                     }}/>
                     </div>
+                </div>
+            </div>
+            <div className='our-lawyers'>
+                <PageSectionHeading title='Наши юристы'/>
+                <p className='our-lawyers__description'>Давно выяснено, что при
+                    оценке дизайна и композиции читаемый текст мешает
+                    сосредоточиться. Lorem Ipsum используют потому, что тот
+                    обеспечивает более или менее стандартное заполнение
+                    шаблона</p>
+                <div className='our-lawyers__lawyers'>
+                    {lawyers.map((lawyer: StaffCardProps) => (
+                        <StaffCard
+                            key={nanoid()}
+                            imageSrc={lawyer.imageSrc}
+                            fullName={lawyer.fullName}
+                            jobTitle={lawyer.jobTitle}
+                            appeal={lawyer.appeal}
+                            achievement={lawyer.achievement}/>))}
                 </div>
             </div>
         </>

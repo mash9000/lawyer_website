@@ -1,0 +1,11 @@
+.our-lawyers__lawyers {
+  max-width: 1320px;
+  width: inherit;
+  display: flex;
+  gap: 24px;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

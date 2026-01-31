@@ -109,6 +109,7 @@
     margin: 40px auto 0;
     width: 233px;
     display: inline-block;
+    text-align: center;
   } @else if ($element == 'content-header') {
     @include universal-text-formatter;
     font: {
@@ -246,6 +247,15 @@
     }
     line-height: 150%;
     color: map.get(colors.$mainColors, 'colors-black-text');
+  } @else if ($element == 'our-lawyers-description') {
+    @include universal-text-formatter;
+    font: {
+      weight: 400;
+      size: 16px;
+    }
+    line-height: 120%;
+    color: map.get(colors.$mainColors, 'colors-black-text');
+    text-align: center;
   } @else {
     @error 'неверно указан стилизуемый элемент ("#{$element}")';
   }
