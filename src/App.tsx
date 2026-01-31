@@ -18,6 +18,9 @@ import './styles/about-us/__image/about-us__image.scss';
 import './styles/our-lawyers/our-lawyers.scss';
 import './styles/our-lawyers/__description/our-lawyers__description.scss';
 import './styles/our-lawyers/__lawyers/our-lawyers__lawyers.scss';
+import './styles/reviews/reviews.scss';
+import './styles/reviews/__content/reviews__content.scss';
+import './styles/reviews/__buttons/reviews__buttons.scss';
 
 import {
     PageSectionHeading
@@ -31,6 +34,9 @@ import type {
 } from "./components/StaffCard/model/StaffCardProps.ts";
 import {StaffCard} from "./components/StaffCard/StaffCard.tsx";
 import {nanoid} from "nanoid";
+import {reviews} from "./data/reviews.ts";
+import type {ReviewProps} from "./components/Review/model/ReviewProps.ts";
+import {Review} from "./components/Review/Review.tsx";
 
 export const App = () => {
     return (
@@ -144,6 +150,24 @@ export const App = () => {
                             jobTitle={lawyer.jobTitle}
                             appeal={lawyer.appeal}
                             achievement={lawyer.achievement}/>))}
+                </div>
+            </div>
+            <div className='reviews'>
+                <PageSectionHeading title='Что о нас говорят клиенты'/>
+                <div className='reviews__content'>
+                    {reviews.map((review: ReviewProps) => (<Review {...review} />))}
+                </div>
+                <div className='reviews__buttons'>
+                    <Button title='Все отзывы'
+                            functionPerformed={() => console.info('все отзывы')}/>
+                    <Button title='Написать отзыв'
+                            functionPerformed={() => console.info('написать отзыв')}
+                            additionalStylesForSomeReason={
+                                {
+                                    backgroundColor: '#E6E6E6',
+                                    color: '#222222',
+                                    borderColor: '#E6E6E6'
+                                }}/>
                 </div>
             </div>
         </>

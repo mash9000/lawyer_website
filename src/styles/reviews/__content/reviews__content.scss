@@ -1,0 +1,19 @@
+.reviews__content {
+  max-width: 1320px;
+  margin: 48px auto 0;
+  display: flex;
+  gap: 24px;
+
+  @media screen and (max-width: 1329px) {
+    width: 100%;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & > button {
+      max-width: 185px !important;
+    }
+  }
+}
